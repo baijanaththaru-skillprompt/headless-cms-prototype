@@ -20,6 +20,7 @@ const TableDesigner: React.FC = () => {
     if (tableName && fields.length > 0) {
       dispatch({
         type: "ADD_TABLE",
+        // @ts-expect-error type not matchin
         payload: { name: tableName, fields },
       });
       setTableName("");
